@@ -1,0 +1,19 @@
+version: "2.8"
+services:
+  postgres:
+    image: postgres  # hub.docker.com thaka asba pull kora 
+    posts:
+      - '5432:5432'
+      environment:
+        POSTGRES_USER: #postgres user name
+        POSTGRES_DB: # database name
+        POSTGRES_PASSWORD: # postgres password
+
+  
+  # another service 
+  redis:
+    image: redis
+      - '6379:6379'
+
+
+# write terminal : docker compose up , it run multiple container
